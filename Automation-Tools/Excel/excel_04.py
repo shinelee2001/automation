@@ -1,7 +1,7 @@
 import openpyxl as excel
 import shodan
 
-api_key = "oTnCIKGBeeNbSsX04Yc7qcJAaY5CvyY1"
+api_key = "my_key"
 
 api = shodan.Shodan(api_key)
 
