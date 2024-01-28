@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>RSS Reader Result</title>
+    </head>
+    <body>
+        <h1>RSS Reader Result</h1>
+        <a href="/">Redirect</a>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Link</th>
+                    <th>Summary</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in feed.entries %}
+                <tr>
+                    <th>{{entry.title}}</th>
+                    <th><a href="{{entry.link}}">{{entry.link}}</a></th>
+                    <th>{{entry.description}}</th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

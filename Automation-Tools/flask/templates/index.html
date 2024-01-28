@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>RSS Reader</title>
+    </head>
+    <body>
+        <h1>RSS Reader</h1>
+        <form method="POST" action="{{url_for('rss')}}">
+            <label>TYPE RSS URL:</label>
+            <input type="text" name="rss_url" placeholder="rss url" size="40" />
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

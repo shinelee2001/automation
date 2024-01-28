@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Upload File</title>
+    </head>
+    <body>
+        <h1>Webshell Analyzer</h1>
+        <form
+            action="{{ url_for('webshell_analyzer') }}"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+            <input type="file" name="file" /><br /><br />
+            <input type="submit" value="Upload" />
+        </form>
+        <h1>Email Analyzer (.xlsx, .txt only)</h1>
+        <form
+            action="{{ url_for('email_analyzer') }}"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+            <input type="file" name="file" /><br /><br />
+            <input type="submit" value="Upload" />
+        </form>
+    </body>
+</html>

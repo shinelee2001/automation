@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>File Info</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <h1>File Info</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>
+                        Emails
+                    </th>
+                </tr>
+            </thade>
+            <tbody>
+                {%for email in emails%}
+                <tr>
+                    <td>
+                        {{email}}
+                    </td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </body>
+</html>
