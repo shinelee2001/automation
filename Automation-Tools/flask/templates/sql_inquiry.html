@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SQLite DB Inquiry</title>
+    </head>
+    <body>
+        <h1>
+            The data has been stored in sqlite with the information shown below:
+        </h1>
+        {%for table in tables%}
+
+        <h2>{{titles[loop.index]}}</h2>
+        {{table|safe}} {%endfor%}
+    </body>
+</html>

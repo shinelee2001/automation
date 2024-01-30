@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>RSS Reader</title>
@@ -5,8 +6,27 @@
     <body>
         <h1>RSS Reader</h1>
         <form method="POST" action="{{url_for('rss')}}">
-            <label>TYPE RSS URL:</label>
+            <label>RSS URL:</label>
             <input type="text" name="rss_url" placeholder="rss url" size="40" />
+            <button type="submit">Submit</button>
+        </form>
+
+        <h1>RSS to Excel</h1>
+        <form method="POST" action="">
+            <label>RSS URL:</label>
+            <input type="text" name="rss_url" placeholder="rss url" size="40" />
+            <button type="submit">Submit</button>
+        </form>
+
+        <h1>Execl to Sqlite</h1>
+        <form
+            action="{{url_for('convert')}}"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+            <label>Select an excel file that you want to conver to sqlite</label
+            ><br />
+            <input type="file" name="file" />
             <button type="submit">Submit</button>
         </form>
     </body>
